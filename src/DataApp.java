@@ -12,9 +12,13 @@ public class DataApp {
 
 
         //Data pp1 =new Data(person1,education1,workExperience1);
-        Data body=new Data();
-        System.out.println(body.toString());
+     //   Data body=new Data();
+       // System.out.println(body.toString());
         //   Skill skill1=new Skill()
+        
+        System.out.println(person1);
+        System.out.println(education1);
+        System.out.println(workExperience1);
     }
 
    // private static void print(String s) {
