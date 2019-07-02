@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Skill {
@@ -6,13 +7,13 @@ public class Skill {
 
 
 
-public Skill(String skillName){
-    this.skillName=skillName;
-}
+    public Skill(String skillName){
+        this.skillName=skillName;
+    }
 
-public Skill(){
+    public Skill(){
 
-}
+    }
 
     public String getSkillName() {
         return skillName;
@@ -32,7 +33,8 @@ public Skill(){
 
     @Override
     public String toString(){
-    return getSkillName() + " , " + getRatingList();
+
+    return "\nSkills"+"\n"+getSkillName() + " , " + getRatingList();
 
     }
 }

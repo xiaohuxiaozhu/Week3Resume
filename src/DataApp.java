@@ -20,24 +20,27 @@ public class DataApp {
         System.out.println(workExperience1); */
 
 
-        ArrayList<Person> person = new ArrayList<>();
+        //   ArrayList<Person> person = new ArrayList<>();
         ArrayList<Education> eduction = new ArrayList<>();
         ArrayList<WorkExperience> workExperiences = new ArrayList<>();
+        ArrayList<Skill> skill = new ArrayList<>();
 
 
         String addPerson = "";
         String addEduction = "";
         String addWorkExperience = "";
+        String addSkill = "";
 
         Person theperson = new Person();
         Education theeducation = new Education();
         WorkExperience theworkExperience = new WorkExperience();
+        Skill theskill = new Skill();
 
         do {
 
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Enter your name");
+            System.out.println("Enter your full name");
             String personName = sc.nextLine();
             theperson.setName(personName);
 
@@ -45,9 +48,10 @@ public class DataApp {
             String personEmail = sc.nextLine();
             theperson.setEmail(personEmail);
 
+            //    person.add(theperson);
             do {
 
-                System.out.println("Enter your Degree");
+                System.out.println("Enter your Degree: Associate's, Bachelor's, Master's, PHD, etc.");
                 String personEducation = sc.nextLine();
                 theeducation.setDegree(personEducation);
 
@@ -63,11 +67,14 @@ public class DataApp {
                 String personGraYear = sc.nextLine();
                 theeducation.setGraYear(personGraYear);
 
+
                 System.out.println("\nDo you want to add another edcation information?" + "" + "yes/no");
                 addEduction = sc.nextLine();
+                for (int counter = 0; counter <= eduction.size(); counter++) ;
+                eduction.add(theeducation);
             } while (addEduction.equalsIgnoreCase("yes"));
 
-            do {
+    /*        do {
 
                 System.out.println("Enter the last company you worked for");
                 String personWoCo = sc.nextLine();
@@ -91,20 +98,45 @@ public class DataApp {
 
 
 
-
                 System.out.println("\nDo you want to add another work experience information?" + "" + "yes/no");
                 addWorkExperience = sc.nextLine();
+                workExperiences.add(theworkExperience);
             } while (addWorkExperience.equalsIgnoreCase("yes"));
 
+            do{
+                System.out.println("Enter your skill");
+                String personSkill = sc.nextLine();
+                theskill.setSkillName(personSkill);
+
+                System.out.println("Skill rating:Fundamental, Novice, Intermediate, Advanced, Expert" );
+                String personRating=sc.nextLine();
+                theskill.setRatingList(personRating);
 
 
-            System.out.println("Would you like to enter another resumer? (Yes|No)");
-        } while (addPerson.equalsIgnoreCase("no"));
-        System.out.println(theperson );
-        System.out.println(theeducation);
-        System.out.println(theworkExperience);
+
+                System.out.println("\n Do you want to add another skill and rating?" + " "+"yes/no");
+                addSkill=sc.nextLine();
+                skill.add(theskill);
+
+
+            }while (addSkill.equalsIgnoreCase("yes"));
+
+
+
+*/
+
+
+          //  System.out.println("Would you like to enter another resumer? (Yes|No)");
+        } while (addPerson.equalsIgnoreCase("yes"));
+
+
+            System.out.println(theperson);
+            System.out.println(theeducation);
+      /*  System.out.println(theworkExperience);
+        System.out.println(theskill);*/
+        }
     }
-}
+
 
 
 
