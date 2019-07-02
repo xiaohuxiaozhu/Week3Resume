@@ -2,7 +2,7 @@ import java.util.*;
 
 public class DataApp {
 
-
+    private static Skill skill;
     public static void main(String[] args) {
 
       /* tested output
@@ -26,15 +26,18 @@ public class DataApp {
         ArrayList<Skill> skill = new ArrayList<>();
 
 
+
         String addPerson = "";
         String addEduction = "";
         String addWorkExperience = "";
-        String addSkill = "";
+        String addSkill = " ";
 
         Person theperson = new Person();
         Education theeducation = new Education();
         WorkExperience theworkExperience = new WorkExperience();
         Skill theskill = new Skill();
+
+
 
         do {
 
@@ -70,8 +73,7 @@ public class DataApp {
 
                 System.out.println("\nDo you want to add another edcation information?" + "" + "yes/no");
                 addEduction = sc.nextLine();
-                for (int counter = 0; counter <= eduction.size(); counter++) ;
-                eduction.add(theeducation);
+
             } while (addEduction.equalsIgnoreCase("yes"));
 
            do {
@@ -104,19 +106,28 @@ public class DataApp {
             } while (addWorkExperience.equalsIgnoreCase("yes"));
 
             do{
+
+                Scanner sc1=new Scanner(System.in);
                 System.out.println("Enter your skill");
-                String personSkill = sc.nextLine();
+                String personSkill = sc1.nextLine();
+
                 theskill.setSkillName(personSkill);
 
+
                 System.out.println("Skill rating:Fundamental, Novice, Intermediate, Advanced, Expert" );
-                String personRating=sc.nextLine();
+                String personRating=sc1.nextLine();
                 theskill.setRatingList(personRating);
 
 
 
                 System.out.println("\n Do you want to add another skill and rating?" + " "+"yes/no");
                 addSkill=sc.nextLine();
-                skill.add(theskill);
+               skill.add(theskill);
+
+
+
+
+
 
 
             }while (addSkill.equalsIgnoreCase("yes"));
@@ -132,10 +143,17 @@ public class DataApp {
 
             System.out.println(theperson);
             System.out.println(theeducation);
-       System.out.println(theworkExperience);
-        System.out.println(theskill);
+            System.out.println(theworkExperience);
+            System.out.println(theskill);
+            for (Skill item:skill){
+                System.out.println(item.getSkillName()+","+item.getRatingList());
+            }
+
         }
-    }
+
+        }
+
+
 
 
 
