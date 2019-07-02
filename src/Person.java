@@ -31,7 +31,7 @@ public class Person {
 
     @Override
     public String toString(){
-        return getName()+" \nMy email is :" + getEmail();
+        return "===================="+"\n"+getName() + "\n"+getEmail();
 
 
     }

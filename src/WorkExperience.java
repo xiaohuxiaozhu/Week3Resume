@@ -63,8 +63,8 @@ public class WorkExperience {
 
     @Override
     public String toString(){
-        return getCompanyName()+"\n " +getJobTitle()
-                +"\n"+getStartDate()+"\n" + getEndDate()
+        return "\nExperience"+"\n"+getJobTitle()+ "\n"+getCompanyName()
+                +","+" "+getStartDate()+"-" + getEndDate()
                 +"\n"+getDescription();
     }
 }

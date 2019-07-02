@@ -49,7 +49,7 @@ public class Education {
 
     @Override
     public String toString(){
-        return getDegree() + " in" +"  " +getSchoolName()+","+ "\n" + getSchoolName()+","+getGraYear();
+        return "\nEducation"+"\n"+getDegree() + " in" +"  " +getMajor() + "\n"+getSchoolName()+","+","+getGraYear();
     }
 }
 
