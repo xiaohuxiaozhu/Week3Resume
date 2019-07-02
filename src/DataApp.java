@@ -74,7 +74,7 @@ public class DataApp {
                 eduction.add(theeducation);
             } while (addEduction.equalsIgnoreCase("yes"));
 
-    /*        do {
+           do {
 
                 System.out.println("Enter the last company you worked for");
                 String personWoCo = sc.nextLine();
@@ -123,7 +123,7 @@ public class DataApp {
 
 
 
-*/
+
 
 
           //  System.out.println("Would you like to enter another resumer? (Yes|No)");
@@ -132,8 +132,8 @@ public class DataApp {
 
             System.out.println(theperson);
             System.out.println(theeducation);
-      /*  System.out.println(theworkExperience);
-        System.out.println(theskill);*/
+       System.out.println(theworkExperience);
+        System.out.println(theskill);
         }
     }
 

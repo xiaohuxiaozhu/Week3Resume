@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Skill {
     private String skillName;
-    private ArrayList<Skill> ratingList;
+    private String ratingList;
 
 
 
@@ -23,11 +23,11 @@ public class Skill {
         this.skillName = skillName;
     }
 
-    public ArrayList<Skill> getRatingList() {
+    public String getRatingList() {
         return ratingList;
     }
 
-    public void setRatingList(ArrayList<Skill> ratingList) {
+    public void setRatingList(String ratingList) {
         this.ratingList = ratingList;
     }
 
